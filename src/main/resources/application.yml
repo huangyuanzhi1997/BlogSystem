@@ -1,13 +1,18 @@
+server:
+  port: 8080
 spring:
-  datasource:
-    name: blogsystem
-    type: com.alibaba.druid.pool.DruidDataSource
-    driver-class-name: com.mysql.jdbc.Driver
-    #本地数据库
-    url: jdbc:mysql://localhost:3306/blog_system?characterEncoding=utf-8&useSSL=false
-    username: root
-    password: 123456
-mybatis-plus:
-  global-config:
-    db-config:
-      db-type: mysql
+  profiles:
+  # 外置jdbc和log配置文件
+    active: jdbc,log
+
+  thymeleaf:
+    prefix: classpath:/templates/
+    check-template-location: true
+    suffix: .html
+    encoding: UTF-8
+    content-type: text/html
+    mode: HTML5
+    cache: false
+
+mybatis:
+  type-aliases-package: huangyuanzhi.dao

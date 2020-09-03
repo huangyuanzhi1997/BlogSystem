@@ -14,15 +14,6 @@
 
     <packaging>jar</packaging>
 
-    <!--<build>-->
-        <!--<plugins>-->
-            <!--<plugin>-->
-                <!--<groupId>org.springframework.boot</groupId>-->
-                <!--<artifactId>spring-boot-maven-plugin</artifactId>-->
-            <!--</plugin>-->
-        <!--</plugins>-->
-    <!--</build>-->
-
     <!--指定springboot版本-->
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -72,6 +63,12 @@
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>1.2.0</version>
+        </dependency>
+
+        <!--thymeleaf引擎，不添加此依赖可能会出现404问题-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
 
         <!-- 1、添加mybatis.generator依赖 -->
