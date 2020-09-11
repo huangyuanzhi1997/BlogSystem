@@ -1,5 +1,7 @@
 package top.huangyuanzhi.controller.home;
 
+import top.huangyuanzhi.controller.util.MapCache;
+
 /**
  * @Description TODO
  * @Author Administrator
@@ -8,6 +10,8 @@ package top.huangyuanzhi.controller.home;
  */
 public abstract class AbstractController {
     public static String THEME = "themes";
+
+    protected MapCache cache = MapCache.single();
 
     public String render(String viewName) {
         return THEME + "/" + viewName;
