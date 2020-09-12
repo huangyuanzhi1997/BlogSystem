@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" th:with="title='管理中心',active='home'">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:with="title='评论管理',active='comments'">
 <header th:replace="admin/header::headerFragment(${title},${active})"></header>
-
 <body class="fixed-left">
 <div id="wrapper">
     <div th:replace="admin/header::header-body"></div>
@@ -10,11 +9,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
-                        <h4 class="page-title">仪表盘</h4>
+                        <h4 class="page-title">评论管理</h4>
+
+
+
                     </div>
-
-
-
                 </div>
             </div>
         </div>
